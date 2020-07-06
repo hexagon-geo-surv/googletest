@@ -504,10 +504,11 @@ class ThreadLocalRegistryImpl {
                               FALSE,
                               thread_id);
     }
-#endif
+#else
     HANDLE thread = ::OpenThread(SYNCHRONIZE | THREAD_QUERY_INFORMATION,
                                  FALSE,
                                  thread_id);
+#endif
     GTEST_CHECK_(thread != NULL);
     // We need to to pass a valid thread ID pointer into CreateThread for it
     // to work correctly under Win98.

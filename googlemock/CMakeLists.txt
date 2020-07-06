@@ -98,6 +98,12 @@ cxx_library(gmock_main
 if (DEFINED CMAKE_VERSION AND NOT "${CMAKE_VERSION}" VERSION_LESS "2.8.11")
   target_include_directories(gmock      INTERFACE "${gmock_SOURCE_DIR}/include")
   target_include_directories(gmock_main INTERFACE "${gmock_SOURCE_DIR}/include")
+  target_link_libraries(gmock
+    $<$<PLATFORM_ID:WindowsCE>:CONAN_PKG::boost-WinCEAdapter>
+  )
+  target_link_libraries(gmock_main
+    $<$<PLATFORM_ID:WindowsCE>:CONAN_PKG::boost-WinCEAdapter>
+  )
 endif()
 
 ########################################################################

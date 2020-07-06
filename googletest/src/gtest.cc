@@ -84,7 +84,7 @@
 
 # include <windows.h>  // NOLINT
 # undef min
-# include "gtest-internal-winceadapter-time.h"
+# include <boost-winceadapter_time.h>
 # include <io.h>
 
 #elif GTEST_OS_WINDOWS  // We are on Windows proper.
