@@ -1135,7 +1135,7 @@ const ::std::vector<testing::internal::string>& GetInjectableArgvs() {
 
 #if GTEST_OS_WINDOWS_MOBILE
 namespace posix {
-void Abort() {
+GTEST_API_ void Abort() {
   DebugBreak();
   TerminateProcess(GetCurrentProcess(), 1);
 }

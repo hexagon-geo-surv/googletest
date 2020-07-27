@@ -2412,7 +2412,7 @@ GTEST_DISABLE_MSC_WARNINGS_POP_()
 // Windows CE has no C library. The abort() function is used in
 // several places in Google Test. This implementation provides a reasonable
 // imitation of standard behaviour.
-void Abort();
+GTEST_API_ void Abort();
 #else
 inline void Abort() { abort(); }
 #endif  // GTEST_OS_WINDOWS_MOBILE
