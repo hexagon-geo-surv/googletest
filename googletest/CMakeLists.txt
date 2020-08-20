@@ -98,7 +98,7 @@ if (DEFINED CMAKE_VERSION AND NOT "${CMAKE_VERSION}" VERSION_LESS "2.8.11")
   target_include_directories(gtest_main INTERFACE "${gtest_SOURCE_DIR}/include")
   
   target_link_libraries(gtest PUBLIC $<$<PLATFORM_ID:WindowsCE>:WinCEAdapter::WinCEAdapter>)
-  target_link_libraries(gtest_main PUBLIC $<$<PLATFORM_ID:WindowsCE>:WinCEAdapter::WinCEAdapter>)
+  target_link_libraries(gtest_main PUBLIC $<$<PLATFORM_ID:WindowsCE>:gtest> $<$<PLATFORM_ID:WindowsCE>:WinCEAdapter::WinCEAdapter>)
 endif()
 
 ########################################################################

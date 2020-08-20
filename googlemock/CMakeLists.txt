@@ -99,7 +99,7 @@ if (DEFINED CMAKE_VERSION AND NOT "${CMAKE_VERSION}" VERSION_LESS "2.8.11")
   target_include_directories(gmock      INTERFACE "${gmock_SOURCE_DIR}/include")
   target_include_directories(gmock_main INTERFACE "${gmock_SOURCE_DIR}/include")
   target_link_libraries(gmock PUBLIC $<$<PLATFORM_ID:WindowsCE>:WinCEAdapter::WinCEAdapter>)
-  target_link_libraries(gmock_main PUBLIC $<$<PLATFORM_ID:WindowsCE>:WinCEAdapter::WinCEAdapter>)
+  target_link_libraries(gmock_main PUBLIC $<$<PLATFORM_ID:WindowsCE>:gmock> $<$<PLATFORM_ID:WindowsCE>:WinCEAdapter::WinCEAdapter>)
 endif()
 
 ########################################################################
