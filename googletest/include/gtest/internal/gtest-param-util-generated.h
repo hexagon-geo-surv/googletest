@@ -3197,7 +3197,9 @@ class CartesianProductGenerator2
     // Advance should not be called on beyond-of-range iterators
     // so no component iterators must be beyond end of range, either.
     virtual void Advance() {
+#if defined(UNDER_CE) && (UNDER_CE == 0x700)
       assert(!AtEnd());
+#endif
       ++current2_;
       if (current2_ == end2_) {
         current2_ = begin2_;
@@ -3316,7 +3318,9 @@ class CartesianProductGenerator3
     // Advance should not be called on beyond-of-range iterators
     // so no component iterators must be beyond end of range, either.
     virtual void Advance() {
+#if defined(UNDER_CE) && (UNDER_CE == 0x700)
       assert(!AtEnd());
+#endif
       ++current3_;
       if (current3_ == end3_) {
         current3_ = begin3_;
@@ -3453,7 +3457,9 @@ class CartesianProductGenerator4
     // Advance should not be called on beyond-of-range iterators
     // so no component iterators must be beyond end of range, either.
     virtual void Advance() {
+#if defined(UNDER_CE) && (UNDER_CE == 0x700)
       assert(!AtEnd());
+#endif
       ++current4_;
       if (current4_ == end4_) {
         current4_ = begin4_;
@@ -3607,7 +3613,9 @@ class CartesianProductGenerator5
     // Advance should not be called on beyond-of-range iterators
     // so no component iterators must be beyond end of range, either.
     virtual void Advance() {
+#if defined(UNDER_CE) && (UNDER_CE == 0x700)
       assert(!AtEnd());
+#endif
       ++current5_;
       if (current5_ == end5_) {
         current5_ = begin5_;
@@ -3780,7 +3788,9 @@ class CartesianProductGenerator6
     // Advance should not be called on beyond-of-range iterators
     // so no component iterators must be beyond end of range, either.
     virtual void Advance() {
+#if defined(UNDER_CE) && (UNDER_CE == 0x700)
       assert(!AtEnd());
+#endif
       ++current6_;
       if (current6_ == end6_) {
         current6_ = begin6_;
@@ -3970,7 +3980,9 @@ class CartesianProductGenerator7
     // Advance should not be called on beyond-of-range iterators
     // so no component iterators must be beyond end of range, either.
     virtual void Advance() {
+#if defined(UNDER_CE) && (UNDER_CE == 0x700)
       assert(!AtEnd());
+#endif
       ++current7_;
       if (current7_ == end7_) {
         current7_ = begin7_;
@@ -4179,7 +4191,9 @@ class CartesianProductGenerator8
     // Advance should not be called on beyond-of-range iterators
     // so no component iterators must be beyond end of range, either.
     virtual void Advance() {
+#if defined(UNDER_CE) && (UNDER_CE == 0x700)
       assert(!AtEnd());
+#endif
       ++current8_;
       if (current8_ == end8_) {
         current8_ = begin8_;
@@ -4404,7 +4418,9 @@ class CartesianProductGenerator9
     // Advance should not be called on beyond-of-range iterators
     // so no component iterators must be beyond end of range, either.
     virtual void Advance() {
+#if defined(UNDER_CE) && (UNDER_CE == 0x700)
       assert(!AtEnd());
+#endif
       ++current9_;
       if (current9_ == end9_) {
         current9_ = begin9_;
@@ -4647,7 +4663,9 @@ class CartesianProductGenerator10
     // Advance should not be called on beyond-of-range iterators
     // so no component iterators must be beyond end of range, either.
     virtual void Advance() {
+#if defined(UNDER_CE) && (UNDER_CE == 0x700)
       assert(!AtEnd());
+#endif
       ++current10_;
       if (current10_ == end10_) {
         current10_ = begin10_;

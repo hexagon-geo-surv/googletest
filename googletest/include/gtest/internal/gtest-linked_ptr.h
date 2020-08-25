@@ -111,7 +111,9 @@ class linked_ptr_internal {
 
     linked_ptr_internal const* p = ptr;
     while (p->next_ != ptr) {
+#if defined(UNDER_CE) && (UNDER_CE == 0x700)
       assert(p->next_ != this);
+#endif
       p = p->next_;
     }
     p->next_ = this;
@@ -127,7 +129,9 @@ class linked_ptr_internal {
     if (next_ == this) return true;
     linked_ptr_internal const* p = next_;
     while (p->next_ != this) {
+#if defined(UNDER_CE) && (UNDER_CE == 0x700)
       assert(p->next_ != next_);
+#endif
       p = p->next_;
     }
     p->next_ = next_;
@@ -151,7 +155,9 @@ class linked_ptr {
   // Copy an existing linked_ptr<>, adding ourselves to the list of references.
   template <typename U> linked_ptr(linked_ptr<U> const& ptr) { copy(&ptr); }
   linked_ptr(linked_ptr const& ptr) {  // NOLINT
+#if defined(UNDER_CE) && (UNDER_CE == 0x700)
     assert(&ptr != this);
+#endif
     copy(&ptr);
   }
 
